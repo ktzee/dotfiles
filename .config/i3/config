@@ -191,9 +191,10 @@ client.urgent 			$urgent-bg-color 	$urgent-bg-color 	$text-color 		#00ff00
 hide_edge_borders both
 
 bar {
-        status_command i3blocks
+        status_command i3blocks -c ~/.config/i3/i3blocks.conf
 	position top
 	strip_workspace_numbers yes
+	tray_output primary
 	colors {
 		background $inactive-bg-color
 		separator	#757575
@@ -216,8 +217,12 @@ gaps outer 3
 # Wallpaper
 exec ~/.config/i3/.fehbg
 
+# nm-applet
+exec nm-applet
+
 # Monitors
-exec xrandr --output HDMI-1-2 --auto --left-of DP-0
+exec xrandr --output HDMI-1-2 --left-of DP-0
+xrandr --output DP-0 --primary
 
 set $firstMonitor	DP-0
 set $secondMonitor	HDMI-1-2
