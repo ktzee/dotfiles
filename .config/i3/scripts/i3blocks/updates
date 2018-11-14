@@ -1,0 +1,13 @@
+#!/usr/bin/python3
+import os
+
+updates = os.system('dnf update &> /dev/null')
+
+if updates == 0:
+    print('No Updates')
+else:
+    print(updates)
+#if sys.exit(os.system('dnf check-update')) == '100':
+#    print(sys.exit(os.system('dnf check-update'))
+#else:
+#    print('No Updates')
