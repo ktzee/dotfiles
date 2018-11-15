@@ -229,11 +229,6 @@ bindsym --release Shift+Print exec "scrot ~/Pictures/$(date --iso-8601='seconds'
 # nm-applet
 exec nm-applet
 
-# Monitors
-exec xrandr --output DP-0 --panning 0x0+0+0 
-exec xrandr --output HDMI-1-2 --auto --left-of DP-0
-exec xrandr --output DP-0 --primary
-
 set $firstMonitor	DP-0
 set $secondMonitor	HDMI-1-2
 
