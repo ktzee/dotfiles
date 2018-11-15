@@ -17,6 +17,7 @@ fi
 # Easier management of the dotfiles repository
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias vim="nvim"
+alias ll="ls -alh --color"
 # NOTE: Remember to "$ dotfiles config status.showUntrackedFiles no"
 # because of "$ git init --bare $HOME/.dotfiles"
 

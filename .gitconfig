@@ -1,5 +1,0 @@
-[alias]
-	l = log --graph --decorate --oneline
-[user]
-	name = Daniele Consoli
-	email = dconsoli@redhat.com
