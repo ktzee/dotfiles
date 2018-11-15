@@ -30,7 +30,7 @@ font pango:System San Francisco Display 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec gnome-terminal 
+bindsym $mod+Return exec xfce4-terminal 
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -188,7 +188,7 @@ client.urgent 			$urgent-bg-color 	$urgent-bg-color 	$text-color 		#00ff00
 # finds out, if available)
 
 # Disable window borders
-hide_edge_borders both
+# hide_edge_borders both
 
 bar {
   status_command i3blocks -c ~/.config/i3/i3blocks.conf
@@ -227,10 +227,10 @@ bindsym --release Mod1+Sys_Req exec "import -window `xwininfo | awk '/.*Window i
 bindsym --release Shift+Print exec "scrot ~/Pictures/$(date --iso-8601='seconds').png -s -e 'xclip -selection c -t image/png < $f'"
 
 # nm-applet
-exec nm-applet
+exec --no-startup-id nm-applet
 
 set $firstMonitor	DP-0
-set $secondMonitor	HDMI-1-2
+set $secondMonitor	HDMI-1-4
 
 # redshift 
 exec --no-startup-id redshift
