@@ -7,7 +7,7 @@ set smarttab
 " Style
 syntax enable
 set background=dark
-colorscheme solarized
+" colorscheme solarized
 
 " Plugin Manager (vim-plug)
 " 1. Automated installation
