@@ -18,13 +18,15 @@ if [ "$EUID" -ne 0 ]
 fi
 
 ### kitty completion ###
-source <(kitty + complete setup bash)
+# source <(kitty + complete setup bash)
 
 # User specific aliases and functions
 
 #########################################################
 #			ALIAS				#
 #########################################################
+# lsblk with labels
+alias lsblk="lsblk -o +LABEL"
 
 # Easier management of the dotfiles repository
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
@@ -39,6 +41,8 @@ alias ccat="highlight --out-format=ansi"
 # YouTube
 alias YT="youtube-viewer"
 
+# irssi
+alias irc='irssi --config=~/.config/.irssi/config --home=~/.config/.irssi/'
 
 ### Program-specific stuff ###
 # nvm
