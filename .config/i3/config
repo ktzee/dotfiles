@@ -250,7 +250,7 @@ exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 #################
 # Monitor Setup #
 #################
-set $firstMonitor	DP-0
+set $firstMonitor	DP-2
 set $secondMonitor	HDMI-1-4
 
 
