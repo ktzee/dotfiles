@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --bg-fill '/home/dconsoli/.config/i3/wallpapers/wall2.jpg' 
