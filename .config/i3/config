@@ -277,3 +277,7 @@ assign [class="Steam"] $ws4
 # spotify
 for_window [class="Rambox"] move to workspace $ws3
 for_window [class="Spotify"] move to workspace $ws10
+
+
+# Startup Script
+exec .scripts/setdisplay.sh
