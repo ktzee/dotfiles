@@ -279,6 +279,13 @@ statusbar = {
         barend = { priority = "100"; alignment = "right"; };
       };
     };
+    awl_1 = {
+      items = {
+        barstart = { priority = "100"; };
+        awl_1 = { };
+        barend = { priority = "100"; alignment = "right"; };
+      };
+    };
   };
 };
 settings = {
@@ -311,6 +318,36 @@ hilights = (
 );
 completions = { auto = { value = "on"; }; };
 logs = { };
+ignores = (
+  { level = "JOINS PARTS QUITS MODES"; channels = ( "#sbr-virt" ); },
+  {
+    level = "ALL";
+    pattern = "ktz";
+    exception = "yes";
+    channels = ( "#sbr-virt" );
+  },
+  { level = "JOINS PARTS QUITS MODES"; channels = ( "#emeatam" ); },
+  {
+    level = "ALL";
+    pattern = "ktz";
+    exception = "yes";
+    channels = ( "#emeatam" );
+  },
+  { level = "JOINS PARTS QUITS MODES"; channels = ( "#gss-emea" ); },
+  {
+    level = "ALL";
+    pattern = "ktz";
+    exception = "yes";
+    channels = ( "#gss-emea" );
+  },
+  { level = "JOINS PARTS QUITS MODES"; channels = ( "#brno" ); },
+  {
+    level = "ALL";
+    pattern = "ktz";
+    exception = "yes";
+    channels = ( "#brno" );
+  }
+);
 windows = {
   1 = { immortal = "yes"; name = "(status)"; level = "ALL"; };
   2 = {
@@ -354,8 +391,18 @@ windows = {
     );
   };
   6 = { name = "hilight"; sticky = "yes"; };
+  7 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#sbr-virt";
+        tag = "RedHat";
+      }
+    );
+  };
 };
 mainwindows = {
-  1 = { first_line = "6"; lines = "46"; };
-  6 = { first_line = "1"; lines = "5"; };
+  2 = { first_line = "4"; lines = "67"; };
+  6 = { first_line = "1"; lines = "3"; };
 };

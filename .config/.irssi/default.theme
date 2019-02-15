@@ -302,4 +302,8 @@ formats = {
     awl_display_nokey_active = " $C";
     awl_display_key_active = "%w$H$N $C$S";
   };
+  "fe-common/core" = {
+    own_msg = "{ownmsgnick $2 {ownnick $[0]0}}$1";
+    pubmsg = "{pubmsgnick $2 {pubnick \00309$[0]0}}$1";
+  };
 };

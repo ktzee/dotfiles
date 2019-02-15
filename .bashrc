@@ -52,3 +52,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # pywal
 (cat .cache/wal/sequences &)
+
+# Go
+export GOPATH=~/go
