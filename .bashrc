@@ -55,3 +55,4 @@ export NVM_DIR="$HOME/.nvm"
 
 # Go
 export GOPATH=~/go
+export PATH=$PATH:$HOME/go/bin/
