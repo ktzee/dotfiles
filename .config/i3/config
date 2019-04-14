@@ -18,9 +18,6 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec ~/.scripts/dmenu.sh 
 bindsym $mod+shift+d exec --no-startup-id i3-dmenu-desktop
 
-# rofi bind
-bindsym $mod+grave exec rofi -show combi
-
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
@@ -186,7 +183,7 @@ bar {
 		background $darkblack
 		statusline $darkwhite
 		separator $cyan
-#                                       <colorclass>    <border>        <background>    <text>
+#                     <colorclass>    <border>        <background>    <text>
 		focused_workspace	$blue           $darkblue       $darkblack
 		active_workspace	$blue           $blue           $darkblack
 		inactive_workspace	$darkblack      $darkblack      $white
@@ -197,8 +194,11 @@ bar {
 ###################
 # Custom Keybinds #
 ###################
+# rofi bind
+bindsym $mod+grave exec rofi -show combi
+
 # Lock screen
-bindsym	$mod+shift+x exec i3lock --color "$bg-color"
+bindsym	$mod+Shift+x exec i3lock --color "$bg-color"
 
 # Screenshots
 # Desktop screenshot
@@ -277,7 +277,6 @@ assign [class="Steam"] $ws4
 # spotify
 for_window [class="Rambox"] move to workspace $ws3
 for_window [class="Spotify"] move to workspace $ws10
-
 
 # Startup Script
 exec .scripts/setdisplay.sh
