@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --bg-fill '/home/dconsoli/.config/i3/wallpapers/wall1.png' 
+feh --no-fehbg --bg-fill '/home/dconsoli/.config/i3/wallpapers/wall1.png' 
