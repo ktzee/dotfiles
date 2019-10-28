@@ -172,23 +172,23 @@ client.urgent		$darkred	$darkred	$black		$darkred		$darkred
 client.background $black
 
 
-# i3bar
-bar {
-  status_command i3blocks -c ~/.config/i3/i3blocks.conf
-	position top
-	strip_workspace_numbers yes
-	tray_output primary
-  colors {
-		background $darkblack
-		statusline $darkwhite
-		separator $cyan
-#               <colorclass>		<border>        <background>    <text>
-		focused_workspace	$blue           $darkblue       $darkblack
-		active_workspace	$blue           $blue           $darkblack
-		inactive_workspace	$darkblack      $darkblack      $white
-		urgent_workspace	$darkred        $darkred        $white
-	}
-}
+## i3bar
+#bar {
+#  # status_command i3blocks -c ~/.config/i3/i3blocks.conf
+#	position top
+#	strip_workspace_numbers yes
+#	tray_output primary
+#  colors {
+#		background $darkblack
+#		statusline $darkwhite
+#		separator $cyan
+##               <colorclass>		<border>        <background>    <text>
+#		focused_workspace	$blue           $darkblue       $darkblack
+#		active_workspace	$blue           $blue           $darkblack
+#		inactive_workspace	$darkblack      $darkblack      $white
+#		urgent_workspace	$darkred        $darkred        $white
+#	}
+#}
 
 ###################
 # Custom Keybinds #
@@ -278,5 +278,9 @@ assign [class="Steam"] $ws4
 for_window [class="Rambox"] move to workspace $ws3
 for_window [class="Spotify"] move to workspace $ws10
 
+# Polybar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
 # Startup Script
 exec .scripts/setdisplay.sh
+
