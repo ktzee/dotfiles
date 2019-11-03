@@ -284,4 +284,4 @@ exec --no-startup-id .scripts/setdisplay.sh
 # Wallpaper
 exec --no-startup-id feh --bg-scale $wall 
 # Colors
-wal -i -n $scheme 
+exec --no-startup-id wal -i $scheme -n
