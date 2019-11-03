@@ -14,9 +14,16 @@ neovim
 pavucontrol
 rofi
 i3lock
+networkmanager
+network-manager-applet
+networkmanager-openvpn
+zathura
+vlc
 
 AUR:
 otf-inconsolata-powerline-git
+nerd-fonts-ubuntu-mono
+ttf-yosemite-san-francisco-font-git
 
 GIT:
 https://github.com/LukeSmithxyz/st.git

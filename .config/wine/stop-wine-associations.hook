@@ -1,0 +1,10 @@
+[Trigger]
+Type = File
+Operation = Install
+Operation = Upgrade
+Target = usr/share/wine/wine.inf
+
+[Action]
+Description = Stopping Wine from hijacking file associations...
+When = PostTransaction
+Exec = /usr/bin/sed -i 's/winemenubuilder.exe -a -r/winemenubuilder.exe -r/g' /usr/share/wine/wine.inf
