@@ -15,7 +15,7 @@ bindsym $mod+Return exec st
 bindsym $mod+Shift+q kill
 
 # dmenu bind
-bindsym $mod+d exec ~/.scripts/dmenu.sh 
+bindsym $mod+d exec --no-startup-id ~/.scripts/dmenu.sh 
 bindsym $mod+shift+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
@@ -197,7 +197,7 @@ bar {
 bindsym $mod+grave exec rofi -show combi
 
 # Lock screen
-bindsym	$mod+Shift+x exec i3lock --color "$bg-color"
+bindsym	$mod+Ctrl+l exec i3lock --color "$bg-color"
 
 # Screenshots
 # Desktop screenshot
@@ -208,7 +208,7 @@ bindsym --release Mod1+Sys_Req exec "import -window `xwininfo | awk '/.*Window i
 bindsym --release Shift+Print exec "scrot ~/Pictures/$(date --iso-8601='seconds').png -s -e 'xclip -selection c -t image/png < $f'"
 
 # Vim Cheatsheet
-bindsym $mod+F1 exec feh ~/.config/i3/popups/vi-vim-cheat-sheet.gif
+bindsym $mod+F1 exec feh --no-startup-id ~/.config/i3/popups/vi-vim-cheat-sheet.gif
 
 
 ##################
@@ -229,9 +229,6 @@ for_window [class="feh"] floating enable
 ################
 # Custom Execs #
 ################
-
-# Wallpaper
-exec ~/.config/i3/.fehbg
 
 # nm-applet
 exec --no-startup-id nm-applet
@@ -254,7 +251,6 @@ set $secondMonitor HDMI-0
 
 
 # Workspace Default Monitors
-
 workspace $ws1 output $firstMonitor
 workspace $ws2 output $firstMonitor
 workspace $ws3 output $firstMonitor
@@ -274,10 +270,11 @@ assign [class="Signal"] $ws3
 assign [class="discord"] $ws3
 assign [class="Hexchat"] $ws3
 assign [class="Steam"] $ws4
-# spotify
 for_window [class="Rambox"] move to workspace $ws3
 for_window [class="Spotify"] move to workspace $ws10
 
 # Startup Script
-exec .scripts/setdisplay.sh
+exec --no-startup-id .scripts/setdisplay.sh
 
+# Wallpaper
+exec --no-startup-id --bg-scale /home/ktz/.config/wallpapers/games/poe/kitava.png
