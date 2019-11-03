@@ -1,3 +1,8 @@
+# Wallpaper Config
+set $wall "$HOME/.config/wallpapers/games/poe/kitava.png"
+# Image for wal color scheme
+set $scheme "$HOME/.config/wallpapers/games/poe/kitava_h1fey.png"
+
 # Mod Key
 set $mod Mod4
 
@@ -277,4 +282,6 @@ for_window [class="Spotify"] move to workspace $ws10
 exec --no-startup-id .scripts/setdisplay.sh
 
 # Wallpaper
-exec --no-startup-id --bg-scale /home/ktz/.config/wallpapers/games/poe/kitava.png
+exec --no-startup-id feh --bg-scale $wall 
+# Colors
+wal -i -n $scheme 
