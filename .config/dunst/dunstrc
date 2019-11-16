@@ -1,5 +1,5 @@
 [global]
-	font = System San Francisco Display 12
+    font = Inconsolata for Powerline 12 
 
     # allow a small subset of html markup:
     # <b>bold</b>
@@ -125,7 +125,7 @@
     dmenu = /usr/bin/dmenu -i -fn "inconsolata-10" -p dunst:
 
     # browser for opening urls in context menu
-    browser = /usr/bin/chromium-browser -new-tab
+    browser = /usr/bin/chromium -new-tab
 
     frame_width = 0
     frame_color = "#222222"
@@ -143,8 +143,8 @@
     close_all = ctrl+shift+space
 
     # redisplay last message(s)
-    # On the US keyboard layout 'grave' is normally above TAB and left of '1'.
-    history = ctrl+grave
+    # On the US keyboard layout 'grave' is normally above TAB and left of '1'.	    
+    # history = ctrl+grave
 
     # context menu
     context = ctrl+shift+period
