@@ -1,7 +1,7 @@
 # Image for wallpaper
 set $wall "$HOME/.config/wallpapers/games/poe/kitava.png"
 # Image for wal color scheme
-set $scheme "$HOME/.config/wallpapers/games/poe/kitava_h1fey.png"
+set $scheme "$HOME/.config/wallpapers/games/poe/kitava2.png"
 
 # Mod Key
 set $mod Mod4
@@ -180,7 +180,7 @@ client.background $black
 
 # i3bar
 bar {
-	status_command i3blocks -c ~/.config/i3/i3blocks.conf
+	status_command i3blocks -c ~/.config/i3blocks/i3blocks.conf
 	position top
 	strip_workspace_numbers yes
 	tray_output primary
