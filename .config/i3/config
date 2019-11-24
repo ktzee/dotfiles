@@ -211,11 +211,11 @@ bindsym $mod+shift+d exec rofi -show drun
 bindsym	$mod+Ctrl+l exec i3lock --color 111111
 
 # Desktop screenshot
-bindsym --release Print exec "scrot ~/Pictures/$(date --iso-8601='seconds').png -m -e 'xclip -selection c -t image/png < $f'"
+bindsym --release Print exec "scrot ~/Pictures/scrot/$(date --iso-8601='seconds').png -m -e 'xclip -selection c -t image/png < $f'"
 # Choose window
 bindsym --release Mod1+Sys_Req exec "import -window `xwininfo | awk '/.*Window id:.*/ {print $4}'` ~/Pictures/$(date --iso-8601='seconds').png"
 # Selection screenshot
-bindsym --release Shift+Print exec "scrot ~/Pictures/$(date --iso-8601='seconds').png -s -e 'xclip -selection c -t image/png < $f'"
+bindsym --release Shift+Print exec "scrot ~/Pictures/scrot/$(date --iso-8601='seconds').png -s -e 'xclip -selection c -t image/png < $f'"
 
 # Vim Cheatsheet
 bindsym $mod+F1 exec feh --no-startup-id ~/.config/i3/popups/vi-vim-cheat-sheet.gif
@@ -250,16 +250,10 @@ exec --no-startup-id compton --config ~/.config/compton/compton.conf
 exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 
 # redshift
-exec --no-startup-id redshift -l 49.19522:16.60796
+exec --no-startup-id redshift
 
 # xrandr script
 exec --no-startup-id .scripts/setdisplay.sh
-
-# wallpaper
-exec --no-startup-id feh --bg-scale $wall 
-
-# color scheme
-exec --no-startup-id wal -i $scheme -n
 
 #################
 # Monitor Setup #
