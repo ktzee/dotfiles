@@ -1,24 +1,16 @@
-" Decent tabbing. Two spaces instead of the tab character.
-set tabstop=2
-set shiftwidth=2
-set expandtab
-set smarttab
+let mapleader =","
+set nu
+syntax on
+filetype plugin indent on
 
-" Style
-syntax enable
-set background=dark
-" colorscheme solarized
+" Compile document, be it groff/LaTeX/markdown/etc.
+	map <leader>c :w! \| !compiler <c-r>%<CR>
 
-" Plugin Manager (vim-plug)
-" 1. Automated installation
-if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
-  silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-" 2. Call Manager
-call plug#begin('~/.vim/plugged')
-" 3. Call Plugins
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-" 4. call plug#end() to update &runtimepath and initialize plugin system 
+" Open corresponding .pdf/.html or preview
+	map <leader>p :!opout <c-r>%<CR><CR>
+
+call plug#begin('~/.config/nvim/plugged')
+Plug 'https://github.com/ying17zi/vim-live-latex-preview'
+Plug 'lervag/vimtex'
+Plug 'LaTeX-Box-Team/LaTeX-Box'
 call plug#end()

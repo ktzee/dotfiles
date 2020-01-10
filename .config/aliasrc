@@ -1,0 +1,1 @@
+alias ll="lsd -alh" tmux="tmux -f ~/.config/.tmux.conf" vim="nvim"
