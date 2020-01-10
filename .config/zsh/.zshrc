@@ -14,6 +14,46 @@ zstyle ':completion:*' menu select
 zmodload zsh/complist
 compinit
 
+# History
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE=~/.cache/zsh/history
+
+# Home/End
+bindkey '^[[H'  beginning-of-line
+bindkey '^[[4~'  end-of-line
+
+# Ctrl+Arrows to move through words
+bindkey '^[[1;5D' backward-word
+bindkey '^[[1;5C' forward-word
+# Ctrl+Backspace deletes previous word
+bindkey '^H' backward-kill-word
+
+# Alt+Backspace - delete last word up to /
+backward-kill-dir () {
+    local WORDCHARS=${WORDCHARS/\/}
+    zle backward-kill-word
+}
+zle -N backward-kill-dir
+bindkey '^[^?' backward-kill-dir
+
+
+# Alt+Left - moves through words up to /
+backward-word-dir () {
+    local WORDCHARS=${WORDCHARS/\/}
+    zle backward-word
+}
+zle -N backward-word-dir
+bindkey "^[[1;3C" forward-word-dir
+
+# Alt+Right - moves through words up to /
+forward-word-dir () {
+    local WORDCHARS=${WORDCHARS/\/}
+    zle forward-word
+}
+zle -N forward-word-dir
+bindkey "^[[1;3D" backward-word-dir
+
 # Include hidden files in autocomplete:
 _comp_options+=(globdots)
 
@@ -34,5 +74,9 @@ lfcd () {
 
 bindkey -s '^o' 'lfcd\n'  # zsh
 
-# Load zsh-syntax-highlighting; should be last.
+# Edit command line in vim with ctrl-e
+autoload edit-command-line; zle -N edit-command-line
+bindkey "^e" edit-command-line
+
+# Load zsh-syntax-highlighting; should be last. Needs to be installed (zsh-syntax-highlighting AUR)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
