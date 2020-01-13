@@ -19,6 +19,13 @@ HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.cache/zsh/history
 
+# Arrow keys
+bindkey '^[[A' history-beginning-search-backward
+bindkey '^[[B' history-beginning-search-forward
+
+# Delete
+bindkey '^[[P' delete-char
+
 # Home/End
 bindkey '^[[H'  beginning-of-line
 bindkey '^[[4~'  end-of-line
@@ -77,6 +84,9 @@ bindkey -s '^o' 'lfcd\n'  # zsh
 # Edit command line in vim with ctrl-e
 autoload edit-command-line; zle -N edit-command-line
 bindkey "^e" edit-command-line
+
+# nvm
+source /usr/share/nvm/init-nvm.sh
 
 # Load zsh-syntax-highlighting; should be last. Needs to be installed (zsh-syntax-highlighting AUR)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
