@@ -247,8 +247,8 @@ for_window [class="feh"] floating enable
 # nm-applet
 exec --no-startup-id nm-applet
 
-# compton
-# exec --no-startup-id compton --config ~/.config/compton/compton.conf
+# picom
+exec --no-startup-id picom --config ~/.config/picom/picom.conf
 
 # dunst
 exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
@@ -257,7 +257,7 @@ exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 exec --no-startup-id redshift
 
 # xrandr script
-exec --no-startup-id .scripts/setdisplay.sh
+# exec --no-startup-id .scripts/setdisplay.sh
 
 #################
 # Monitor Setup #
